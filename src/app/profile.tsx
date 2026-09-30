@@ -33,15 +33,15 @@ const members: any = {
   },
 
   "3": {
-    name: "MEMBER 2",
+    name: "Novie Mae R. Sagaysay",
     role: "Member",
-    age: "20",
-    birthday: "March 3, 2006",
+    age: "25",
+    birthday: "November 27, 2000",
     course: "BS Information Technology",
-    email: "member2@email.com",
-    address: "Member 2 Address",
-    hobbies: "Basketball, Gaming",
-    favorite: "Basketball",
+    email: "noviemaesagaysay450@gmail.com",
+    address: "Sandayong Sur, Danao City",
+    hobbies: "Driving, watching movies",
+    favorite: "seafoods, humba",
   },
 
   "4": {
