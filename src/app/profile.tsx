@@ -1,13 +1,26 @@
 import { router, useLocalSearchParams } from "expo-router";
 import {
-    ScrollView,
-    StyleSheet,
-    Text,
-    TouchableOpacity,
-    View,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
 } from "react-native";
 
-const members: any = {
+// ─── Type Definitions (Clean Architecture) ───────────────────────────────────
+interface MemberProfile {
+  name: string;
+  role: string;
+  age: string;
+  birthday: string;
+  course: string;
+  email: string;
+  address: string;
+  hobbies: string;
+  favorite: string;
+}
+
+const members: Record<string, MemberProfile> = {
   "1": {
     name: "Jonnedel M. Cuizon",
     role: "Leader",
@@ -33,6 +46,7 @@ const members: any = {
   },
 
   "3": {
+    name: "Novie",
     name: "Novie Mae R. Sagaysay",
     role: "Member",
     age: "25",
@@ -45,19 +59,19 @@ const members: any = {
   },
 
   "4": {
-    name: "MEMBER 3",
+    name: "Geoffrey Delan",
     role: "Member",
     age: "21",
-    birthday: "April 4, 2005",
+    birthday: "January 19, 2005",
     course: "BS Information Technology",
-    email: "member3@email.com",
-    address: "Member 3 Address",
-    hobbies: "Coding, Movies",
-    favorite: "Movies",
+    email: "gffrydln@gmail.com",
+    address: "Luyang, Carmen, Cebu",
+    hobbies: "Video Games, Rocket Sport",
+    favorite: "Rocket Sport",
   },
 
   "5": {
-    name: "MEMBER 4",
+    name: "Maclarens",
     role: "Member",
     age: "21",
     birthday: "May 5, 2005",
@@ -72,22 +86,18 @@ const members: any = {
 export default function Profile() {
   const { id } = useLocalSearchParams();
 
-  const member = members[id as string];
+  const memberId = typeof id === "string" ? id : "4";
+  const member = members[memberId];
 
   if (!member) {
     return (
       <View style={styles.errorContainer}>
-        <Text style={styles.errorText}>
-          Member not found.
-        </Text>
-
+        <Text style={styles.errorText}>Member not found.</Text>
         <TouchableOpacity
           style={styles.backButton}
           onPress={() => router.back()}
         >
-          <Text style={styles.backText}>
-            ← Go Back
-          </Text>
+          <Text style={styles.backText}>← Go Back</Text>
         </TouchableOpacity>
       </View>
     );
@@ -99,22 +109,14 @@ export default function Profile() {
       showsVerticalScrollIndicator={false}
     >
       <View style={styles.content}>
-
-        <Text style={styles.name}>
-          {member.name}
-        </Text>
+        <Text style={styles.name}>{member.name}</Text>
 
         <View style={styles.roleContainer}>
-          <Text style={styles.role}>
-            {member.role}
-          </Text>
+          <Text style={styles.role}>{member.role}</Text>
         </View>
 
         <View style={styles.infoBox}>
-
-          <Text style={styles.infoTitle}>
-            Personal Information
-          </Text>
+          <Text style={styles.infoTitle}>Personal Information</Text>
 
           <View style={styles.infoItem}>
             <Text style={styles.label}>Age</Text>
@@ -150,18 +152,25 @@ export default function Profile() {
             <Text style={styles.label}>Favorite</Text>
             <Text style={styles.value}>{member.favorite}</Text>
           </View>
-
         </View>
+
+        {/* ── Link to Member 4 Custom Screen ── */}
+        {memberId === "4" && (
+          <TouchableOpacity
+            style={styles.customScreenButton}
+            onPress={() => router.push("/member4")}
+            <Text style={styles.customScreenText}>
+              ✨ View Geoffrey's Portfolio Screen →
+            </Text>
+          </TouchableOpacity>
+        )}
 
         <TouchableOpacity
           style={styles.backButton}
           onPress={() => router.back()}
         >
-          <Text style={styles.backText}>
-            ← Back to Team
-          </Text>
+          <Text style={styles.backText}>← Back to Team</Text>
         </TouchableOpacity>
-
       </View>
     </ScrollView>
   );
@@ -208,11 +217,9 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     padding: 20,
     elevation: 4,
-
     shadowColor: "#000",
     shadowOpacity: 0.1,
     shadowRadius: 5,
-
     shadowOffset: {
       width: 0,
       height: 2,
@@ -243,13 +250,32 @@ const styles = StyleSheet.create({
     color: "#222",
   },
 
+  customScreenButton: {
+    width: "100%",
+    backgroundColor: "#4F80E1",
+    paddingVertical: 16,
+    borderRadius: 12,
+    alignItems: "center",
+    marginTop: 18,
+    shadowColor: "#4F80E1",
+    shadowOpacity: 0.3,
+    shadowRadius: 6,
+    elevation: 3,
+  },
+
+  customScreenText: {
+    color: "white",
+    fontSize: 16,
+    fontWeight: "bold",
+  },
+
   backButton: {
     width: "100%",
     backgroundColor: "#111827",
     paddingVertical: 15,
     borderRadius: 10,
     alignItems: "center",
-    marginTop: 25,
+    marginTop: 14,
   },
 
   backText: {
