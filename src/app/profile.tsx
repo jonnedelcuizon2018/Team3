@@ -1,10 +1,10 @@
 import { router, useLocalSearchParams } from "expo-router";
 import {
-    ScrollView,
-    StyleSheet,
-    Text,
-    TouchableOpacity,
-    View,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
 } from "react-native";
 
 const members: any = {
@@ -150,8 +150,20 @@ export default function Profile() {
             <Text style={styles.label}>Favorite</Text>
             <Text style={styles.value}>{member.favorite}</Text>
           </View>
-
         </View>
+
+        <View>
+         {/* ── Link to Member 4 Custom Screen ── */}
+        {memberId === "4" && (
+          <TouchableOpacity
+            style={styles.customScreenButton}
+            onPress={() => router.push("/member4")}
+            <Text style={styles.customScreenText}>
+              ✨ View Geoffrey's Portfolio Screen →
+            </Text>
+          </TouchableOpacity>
+        )}
+        <View/>
 
         <TouchableOpacity
           style={styles.backButton}
