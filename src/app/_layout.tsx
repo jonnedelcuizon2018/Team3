@@ -9,6 +9,7 @@ export default function Layout() {
       <Stack.Screen name="ian" options={{ title:'Ian-Profile'}}/> 
       <Stack.Screen name="novie" options={{ title:'Novie-Profile' }}/>
       <Stack.Screen name="geoffrey" options={{ title:'Geoffrey-Profile'}}/>
+      <Stack.Screen name="marclarens" options={{ title:'Marclarens-Profile'}}/>
     </Stack>
   );
 }
