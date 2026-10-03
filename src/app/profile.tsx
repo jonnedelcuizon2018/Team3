@@ -151,20 +151,7 @@ export default function Profile() {
             <Text style={styles.value}>{member.favorite}</Text>
           </View>
         </View>
-
-        <View>
-         {/* ── Link to Member 4 Custom Screen ── */}
-        {memberId === "4" && (
-          <TouchableOpacity
-            style={styles.customScreenButton}
-            onPress={() => router.push("/member4")}
-            <Text style={styles.customScreenText}>
-              ✨ View Geoffrey's Portfolio Screen →
-            </Text>
-          </TouchableOpacity>
-        )}
-        <View/>
-
+        
         <TouchableOpacity
           style={styles.backButton}
           onPress={() => router.back()}
