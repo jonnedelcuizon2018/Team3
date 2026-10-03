@@ -34,7 +34,7 @@ export default function Profile() {
           style={styles.profileImage}
         />
 
-        <Text style={styles.name}>Jonnedel</Text>
+        <Text style={styles.name}>Novie Mae Sagaysay</Text>
 
         <Text style={styles.role}>
           Team Leader • Keyboard Warriors
@@ -112,7 +112,7 @@ export default function Profile() {
             <View>
               <Text style={styles.itemTitle}>Email</Text>
               <Text style={styles.itemText}>
-                jonnedel@example.com
+                novz@example.com
               </Text>
             </View>
           </View>
@@ -141,7 +141,7 @@ export default function Profile() {
 
         <View style={styles.aboutCard}>
           <Text style={styles.aboutText}>
-            Hi! I'm Jonnedel, the leader of Team 3 —
+            Hi! I'm Novie, the leader of Team 3 —
             Keyboard Warriors. I enjoy coding, gaming,
             and learning about technology.
           </Text>
