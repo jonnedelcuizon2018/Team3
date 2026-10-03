@@ -7,35 +7,7 @@ import {
   View,
 } from "react-native";
 
-const members = [
-  {
-    id: "1",
-    name: "Jonnedel",
-    role: "Leader",
-  },
-  {
-    id: "2",
-    name: "Ian",
-    role: "Member",
-  },
-  {
-    id: "3",
-    name: "Novie",
-    role: "Member",
-  },
-  {
-    id: "4",
-    name: "Geoffrey",
-    role: "Member",
-  },
-  {
-    id: "5",
-    name: "Maclarens",
-    role: "Member",
-  },
-];
-
-export default function Team() {
+export default function TeamScreen() {
   return (
     <ScrollView style={styles.container}>
       <View style={styles.content}>
@@ -48,36 +20,58 @@ export default function Team() {
           Select a member
         </Text>
 
-        {members.map((member) => (
-          <TouchableOpacity
-            key={member.id}
-            style={styles.memberCard}
-            onPress={() =>
-              router.push({
-                pathname: "/profile",
-                params: {
-                  id: member.id,
-                },
-              })
-            }
-          >
-            <View>
-              <Text style={styles.memberName}>
-                {member.name}
-              </Text>
+          <View>
+            <Text style={styles.section}>Leader</Text>
+          </View>
 
-              <Text style={styles.memberRole}>
-                {member.role}
+            <TouchableOpacity  onPress={() => router.push("/jhonnedel")}>
+              <View style={styles.memberCard}>
+              <Text style={styles.memberName}>
+                Jhonnedel Cuizon
               </Text>
             </View>
+            </TouchableOpacity> 
 
-            <Text style={styles.arrow}>›</Text>
-          </TouchableOpacity>
-        ))}
+          <View>
+            <Text style={styles.section}>Member</Text>
+          </View>
+
+            <TouchableOpacity>
+              <View style={styles.memberCard}>
+              <Text style={styles.memberName}>
+                Ian Pitogo
+              </Text>
+            </View>
+            </TouchableOpacity> 
+
+            <TouchableOpacity>
+              <View style={styles.memberCard}>
+              <Text style={styles.memberName}>
+                Novie Mae Sagaysay
+              </Text>
+            </View>
+            </TouchableOpacity> 
+
+            <TouchableOpacity>
+              <View style={styles.memberCard}>
+              <Text style={styles.memberName}>
+                Geoffrey Delan
+              </Text>
+            </View>
+            </TouchableOpacity> 
+
+
+            <TouchableOpacity>
+              <View style={styles.memberCard}>
+              <Text style={styles.memberName}>
+                Marclarens Cababan
+              </Text>
+            </View>
+            </TouchableOpacity> 
 
         <TouchableOpacity
           style={styles.backButton}
-          onPress={() => router.back()}
+          onPress={() => router.push("/")}
         >
           <Text style={styles.backText}>
             ← Back to Home
@@ -120,30 +114,28 @@ const styles = StyleSheet.create({
     color: "#777",
   },
 
+  section: {
+    fontSize: 20,
+    fontWeight: "bold",
+    textTransform: "uppercase",
+    letterSpacing: 0.6,
+    marginBottom: 15
+  },
+
   memberCard: {
     backgroundColor: "white",
     padding: 20,
-    marginBottom: 12,
+    marginBottom: 20,
     borderRadius: 12,
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
+    paddingVertical: 30,
   },
 
   memberName: {
     fontSize: 18,
     fontWeight: "bold",
-  },
-
-  memberRole: {
-    fontSize: 14,
-    color: "#666",
-    marginTop: 4,
-  },
-
-  arrow: {
-    fontSize: 30,
-    color: "#888",
   },
 
   backButton: {
