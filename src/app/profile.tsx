@@ -51,7 +51,7 @@ const members: any = {
     birthday: "April 4, 2005",
     course: "BS Information Technology",
     email: "member3@email.com",
-    address: "Member 3 Address",
+    address: "Luyang, Carmen, Cebu",
     hobbies: "Coding, Movies",
     favorite: "Movies",
   },
