@@ -36,7 +36,7 @@ export default function TeamScreen() {
             <Text style={styles.section}>Member</Text>
           </View>
 
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => router.push("/ian")}>
               <View style={styles.memberCard}>
               <Text style={styles.memberName}>
                 Ian Pitogo
