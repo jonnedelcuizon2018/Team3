@@ -1,58 +1,61 @@
-import { router } from "expo-router";
+import { router, Stack } from "expo-router";
 import {
   ScrollView,
   StyleSheet,
   Text,
   TouchableOpacity,
-  View
+  View,
 } from "react-native";
 
 export default function Profile() {
   return (
-    <ScrollView>
-    <View style={styles.container}>
+    <>
+      <Stack.Screen options={{ headerShown: false }} />
 
-      {/* Name */}
-      <Text style={styles.name}>Jonnedel</Text>
-      <Text style={styles.role}>TEAM LEADER</Text>
+      <ScrollView>
+        <View style={styles.container}>
 
-      {/* Information */}
-      <View style={styles.infoBox}>
-        <Text style={styles.label}>Name</Text>
-        <Text style={styles.info}>Jonnedel</Text>
+          <Text style={styles.name}>Jonnedel</Text>
+          <Text style={styles.role}>TEAM LEADER</Text>
 
-        <Text style={styles.label}>Role</Text>
-        <Text style={styles.info}>Leader</Text>
+          <View style={styles.infoBox}>
+            <Text style={styles.label}>Name</Text>
+            <Text style={styles.info}>Jonnedel</Text>
 
-        <Text style={styles.label}>Age</Text>
-        <Text style={styles.info}>26</Text>
+            <Text style={styles.label}>Role</Text>
+            <Text style={styles.info}>Leader</Text>
 
-        <Text style={styles.label}>Birthday</Text>
-        <Text style={styles.info}>July 1, 2000</Text>
+            <Text style={styles.label}>Age</Text>
+            <Text style={styles.info}>26</Text>
 
-        <Text style={styles.label}>Course</Text>
-        <Text style={styles.info}>BS Information Technology</Text>
+            <Text style={styles.label}>Birthday</Text>
+            <Text style={styles.info}>July 1, 2000</Text>
 
-        <Text style={styles.label}>Email / Contact</Text>
-        <Text style={styles.info}>jonnedelcuizon2018@gmail.com / 09916033660</Text>
+            <Text style={styles.label}>Course</Text>
+            <Text style={styles.info}>BS Information Technology</Text>
 
-        <Text style={styles.label}>Hobbies</Text>
-        <Text style={styles.info}>Gaming</Text>
+            <Text style={styles.label}>Email / Contact</Text>
+            <Text style={styles.info}>
+              jonnedelcuizon2018@gmail.com / 09916033660
+            </Text>
 
-        <Text style={styles.label}>Favorite</Text>
-        <Text style={styles.info}>CrossfirePH</Text>
-      </View>
+            <Text style={styles.label}>Hobbies</Text>
+            <Text style={styles.info}>Gaming</Text>
 
-      {/* Back Button */}
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => router.push("/team")}
-      >
-        <Text style={styles.buttonText}>Back to Team</Text>
-      </TouchableOpacity>
+            <Text style={styles.label}>Favorite</Text>
+            <Text style={styles.info}>CrossfirePH</Text>
+          </View>
 
-    </View>
-    </ScrollView>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => router.push("/team")}
+          >
+            <Text style={styles.buttonText}>Back to Team</Text>
+          </TouchableOpacity>
+
+        </View>
+      </ScrollView>
+    </>
   );
 }
 
@@ -63,30 +66,10 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
 
-  header: {
-    width: "100%",
-    padding: 20,
-    backgroundColor: "#222",
-    alignItems: "center",
-  },
-
-  headerText: {
-    color: "white",
-    fontSize: 24,
-    fontWeight: "bold",
-  },
-
-  profileImage: {
-    width: 130,
-    height: 130,
-    borderRadius: 65,
-    marginTop: 25,
-  },
-
   name: {
     fontSize: 26,
     fontWeight: "bold",
-    marginTop: 10,
+    marginTop: 40,
   },
 
   role: {
@@ -122,7 +105,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 40,
     borderRadius: 10,
     marginTop: 20,
-    marginBottom: 10
+    marginBottom: 10,
   },
 
   buttonText: {
