@@ -73,7 +73,7 @@ export default function ProfileScreen() {
           <View>
             <Text style={styles.label}>Course</Text>
             <Text style={styles.value}>
-              BS Information Technology
+              Bachelor of Science in Information Technology
             </Text>
           </View>
         </View>
