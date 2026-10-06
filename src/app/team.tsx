@@ -27,7 +27,7 @@ export default function TeamScreen() {
             <TouchableOpacity  onPress={() => router.push("/jhonnedel")}>
               <View style={styles.memberCard}>
               <Text style={styles.memberName}>
-                Jhonnedel Cuizon
+                Jonnedel Cuizon
               </Text>
             </View>
             </TouchableOpacity> 
