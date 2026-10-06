@@ -30,6 +30,9 @@ export default function Profile() {
         <Text style={styles.label}>Course</Text>
         <Text style={styles.info}>BS Information Technology</Text>
 
+        <Text style={styles.label}>Email / Contact</Text>
+        <Text style={styles.info}>jonnedelcuizon2018@gmail.com / 09916033660</Text>
+
         <Text style={styles.label}>Hobbies</Text>
         <Text style={styles.info}>Gaming</Text>
 
