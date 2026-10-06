@@ -27,6 +27,9 @@ export default function Profile() {
         <Text style={styles.label}>Age</Text>
         <Text style={styles.info}>26</Text>
 
+        <Text style={styles.label}>Birthday</Text>
+        <Text style={styles.info}>July 1, 2000</Text>
+
         <Text style={styles.label}>Course</Text>
         <Text style={styles.info}>BS Information Technology</Text>
 
