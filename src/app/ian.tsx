@@ -97,7 +97,7 @@ export default function ProfileScreen() {
       <View style={styles.aboutCard}>
         <Text style={styles.aboutText}>
           Hello! My name is Ian. I am a member of Team 3
-          and I enjoyed computer hardware servicing, gaming, listening to music, and
+          and I enjoyed computer hardwares servicing, gaming, listening to music, and
           learning new things about technology, also sound system.
         </Text>
       </View>
