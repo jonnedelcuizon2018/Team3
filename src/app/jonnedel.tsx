@@ -31,7 +31,7 @@ export default function Profile() {
         <Text style={styles.info}>BS Information Technology</Text>
 
         <Text style={styles.label}>Hobbies</Text>
-        <Text style={styles.info}>Gaming, Music, Coding</Text>
+        <Text style={styles.info}>Gaming</Text>
 
         <Text style={styles.label}>Favorite</Text>
         <Text style={styles.info}>CrossfirePH</Text>
