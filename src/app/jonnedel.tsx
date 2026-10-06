@@ -1,30 +1,16 @@
 import { router } from "expo-router";
 import {
-    Image,
-    ScrollView,
-    StyleSheet,
-    Text,
-    TouchableOpacity,
-    View,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View
 } from "react-native";
 
 export default function Profile() {
   return (
     <ScrollView>
     <View style={styles.container}>
-
-      {/* Header */}
-      <View style={styles.header}>
-        <Text style={styles.headerText}>PROFILE</Text>
-      </View>
-
-      {/* Profile Picture */}
-      <Image
-        source={{
-          uri: "https://i.pravatar.cc/300",
-        }}
-        style={styles.profileImage}
-      />
 
       {/* Name */}
       <Text style={styles.name}>Jonnedel</Text>
