@@ -20,7 +20,7 @@ export default function Profile() {
 
           <View style={styles.infoBox}>
             <Text style={styles.label}>Name</Text>
-            <Text style={styles.info}>Jonnedel</Text>
+            <Text style={styles.info}>Jonnedel M. Cuizon</Text>
 
             <Text style={styles.label}>Role</Text>
             <Text style={styles.info}>Leader</Text>
