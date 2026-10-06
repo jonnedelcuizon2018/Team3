@@ -48,7 +48,7 @@ export default function Profile() {
         style={styles.button}
         onPress={() => router.push("/team")}
       >
-        <Text style={styles.buttonText}>BACK</Text>
+        <Text style={styles.buttonText}>Back to Team</Text>
       </TouchableOpacity>
 
     </View>
