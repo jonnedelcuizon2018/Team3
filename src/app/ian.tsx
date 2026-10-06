@@ -31,7 +31,7 @@ export default function ProfileScreen() {
 
         <Image
           source={{
-            uri: "https://i.pravatar.cc/300?img=12",
+            uri: "https://www.reddit.com/r/loreofleague/comments/1r97ocz/we_might_have_a_new_champion_trailer_taking_place/",
           }}
           style={styles.profileImage}
         />
@@ -61,17 +61,15 @@ export default function ProfileScreen() {
         <View style={styles.line} />
 
         <View style={styles.infoRow}>
-          <Text style={styles.icon}>🎂</Text>
           <View>
             <Text style={styles.label}>Age</Text>
-            <Text style={styles.value}>18 years old</Text>
+            <Text style={styles.value}>23 years old</Text>
           </View>
         </View>
 
         <View style={styles.line} />
 
         <View style={styles.infoRow}>
-          <Text style={styles.icon}>🎓</Text>
           <View>
             <Text style={styles.label}>Course</Text>
             <Text style={styles.value}>
@@ -83,11 +81,10 @@ export default function ProfileScreen() {
         <View style={styles.line} />
 
         <View style={styles.infoRow}>
-          <Text style={styles.icon}>📧</Text>
           <View>
             <Text style={styles.label}>Email</Text>
             <Text style={styles.value}>
-              ianpitogo@example.com
+              ianpitogooz@gmail.com
             </Text>
           </View>
         </View>
@@ -100,8 +97,8 @@ export default function ProfileScreen() {
       <View style={styles.aboutCard}>
         <Text style={styles.aboutText}>
           Hello! My name is Ian. I am a member of Team 3
-          and I enjoy coding, gaming, listening to music, and
-          learning new things about technology.
+          and I enjoyed computer hardwares servicing, gaming, listening to music, and
+          learning new things about technology, also sound system.
         </Text>
       </View>
 
@@ -110,19 +107,19 @@ export default function ProfileScreen() {
 
       <View style={styles.hobbiesContainer}>
         <View style={styles.hobby}>
-          <Text>🎮 Gaming</Text>
+          <Text> Gaming</Text>
         </View>
 
         <View style={styles.hobby}>
-          <Text>💻 Coding</Text>
+          <Text>Css, Coding</Text>
         </View>
 
         <View style={styles.hobby}>
-          <Text>🎵 Music</Text>
+          <Text>Sound System, Music</Text>
         </View>
 
         <View style={styles.hobby}>
-          <Text>📱 Technology</Text>
+          <Text> Technology, nuclear plants etc..</Text>
         </View>
       </View>
 
