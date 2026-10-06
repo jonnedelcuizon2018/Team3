@@ -63,7 +63,7 @@ export default function ProfileScreen() {
         <View style={styles.infoRow}>
           <View>
             <Text style={styles.label}>Age</Text>
-            <Text style={styles.value}>18 years old</Text>
+            <Text style={styles.value}>23 years old</Text>
           </View>
         </View>
 
