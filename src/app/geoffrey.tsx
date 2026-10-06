@@ -69,7 +69,7 @@ export default function Profile() {
 
           <View style={styles.textContainer}>
             <Text style={styles.label}>Age</Text>
-            <Text style={styles.value}>18 years old</Text>
+            <Text style={styles.value}>21 years old</Text>
           </View>
         </View>
 
@@ -94,7 +94,7 @@ export default function Profile() {
           <View style={styles.textContainer}>
             <Text style={styles.label}>Email</Text>
             <Text style={styles.value}>
-              geoffrey@example.com
+              geoffrey@gmail.com
             </Text>
           </View>
         </View>
@@ -107,7 +107,7 @@ export default function Profile() {
           <View style={styles.textContainer}>
             <Text style={styles.label}>Location</Text>
             <Text style={styles.value}>
-              Philippines
+              Luyang, Carmen, Cebu, Philippines
             </Text>
           </View>
         </View>
