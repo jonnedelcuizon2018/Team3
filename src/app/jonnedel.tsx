@@ -25,7 +25,7 @@ export default function Profile() {
         <Text style={styles.info}>Leader</Text>
 
         <Text style={styles.label}>Age</Text>
-        <Text style={styles.info}>18</Text>
+        <Text style={styles.info}>26</Text>
 
         <Text style={styles.label}>Course</Text>
         <Text style={styles.info}>BS Information Technology</Text>
@@ -34,7 +34,7 @@ export default function Profile() {
         <Text style={styles.info}>Gaming, Music, Coding</Text>
 
         <Text style={styles.label}>Favorite</Text>
-        <Text style={styles.info}>Mobile Legends</Text>
+        <Text style={styles.info}>CrossfirePH</Text>
       </View>
 
       {/* Back Button */}
